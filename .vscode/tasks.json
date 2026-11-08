@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Raytracing",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "args": [
+                "raytrace.cpp",
+                "glad/src/gl.c",
+                "-Iglad/include",
+                "-IC:/msys64/ucrt64/include",
+                "-LC:/msys64/ucrt64/lib",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-lopengl32",
+                "-o",
+                "raytracing.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
